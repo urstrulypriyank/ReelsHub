@@ -1,0 +1,14 @@
+.player {
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+}
+.videoWrapper {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
