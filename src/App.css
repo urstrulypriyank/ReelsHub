@@ -3,26 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.app::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-snap-type: y mandatory;
 }
 .app {
   background-color: black;
-  height: 100vh;
   display: grid;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-videoList {
-  position: relative;
-  height: 800px;
-  border-radius: 20px;
-  overflow: scroll;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.app::-webkit-scrollbar {
-  display: none;
-}
 
 /* Hide scrollbar for IE, Edge and Firefox */

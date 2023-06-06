@@ -3,7 +3,7 @@ import styles from "./Video.module.css";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
-const VideoComponent = () => {
+const VideoComponent = ({ channel, description, song }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const handleVideoPlayback = () => {
@@ -16,22 +16,20 @@ const VideoComponent = () => {
     }
   };
   return (
-    <div>
-      <div className={styles.videoWrapper}>
-        <video
-          loop
-          className={styles.player}
-          autoPlay={true}
-          ref={videoRef}
-          onClick={handleVideoPlayback}
-        >
-          <source src="/reel1.mp4" type="video/mp4" />
-        </video>
-        {/* footer & sidebar */}
+    <div className={styles.videoWrapper}>
+      <video
+        loop
+        className={styles.player}
+        autoPlay={true}
+        ref={videoRef}
+        onClick={handleVideoPlayback}
+      >
+        <source src="/reel1.mp4" type="video/mp4" />
+      </video>
+      {/* footer & sidebar */}
 
-        <Sidebar />
-        <Footer />
-      </div>
+      <Sidebar />
+      <Footer channel={channel} description={description} song={song} />
     </div>
   );
 };

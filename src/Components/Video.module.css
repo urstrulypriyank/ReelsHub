@@ -5,10 +5,11 @@
   border-radius: 10px;
 }
 .videoWrapper {
-  scroll-snap-align: start;
-  display: flex;
+  scroll-snap-align: center;
+  /* display: flex; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
